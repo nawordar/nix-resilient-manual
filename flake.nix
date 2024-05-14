@@ -21,7 +21,7 @@
           inherit system;
           config.allowUnfreePredicate = pkg:
             builtins.elem (lib.getName pkg) ["symbola"];
-          overlays = [(import ./nix/overlay.nix)];
+          overlays = [(import ./overlay.nix)];
         };
 
         FONTCONFIG_FILE = pkgs.makeFontsConf {
